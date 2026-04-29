@@ -1,0 +1,1 @@
+masscan -p22 --rate 10000 -iL contabo.txt --exclude 255.255.255.255 | awk '{print $6":"$4}' | sed 's/\/tcp//g' > targets.txt
