@@ -1,0 +1,1 @@
+zmap -p 22 -w contabo.txt --rate 8000 --source-port 53 -o - | stdbuf -oL awk '{print $1":22"}' >> targets.txt
